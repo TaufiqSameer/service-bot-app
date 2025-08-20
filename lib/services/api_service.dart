@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 class ApiService {
   static const String baseUrl = "https://service-bot-production.up.railway.app/api";
 
-  // About / Team
+  
   static Future<List<dynamic>> getTeam() async {
     final response = await http.get(Uri.parse("$baseUrl/team"));
     if (response.statusCode == 200) {
@@ -14,17 +14,17 @@ class ApiService {
     }
   }
 
-// Move Robot
+
 static Future<void> moveRobot() async {
   final response = await http.post(
-    Uri.parse("$baseUrl/move"), // now calls /api/move
+    Uri.parse("$baseUrl/move"), 
     headers: {"Content-Type": "application/json"},
   );
 
   if (response.statusCode == 200) {
     final data = jsonDecode(response.body);
     if (data["success"] == true) {
-      return; // ✅ success
+      return; 
     } else {
       throw Exception("Failed to move robot: ${data["message"]}");
     }
@@ -35,7 +35,7 @@ static Future<void> moveRobot() async {
 
 
 
-  // Logs
+  
   static Future<List<dynamic>> fetchLogs() async {
     final response = await http.get(Uri.parse("$baseUrl/logs"));
     if (response.statusCode == 200) {
@@ -45,7 +45,7 @@ static Future<void> moveRobot() async {
     }
   }
 
-  // Status (always return latest row as Map)
+  
 static Future<List<dynamic>> fetchStatus() async {
     final response = await http.get(Uri.parse("https://service-bot-production.up.railway.app/api/status"));
 
@@ -56,7 +56,7 @@ static Future<List<dynamic>> fetchStatus() async {
     }
   }
 
-  // Orders
+  
   static Future<List<dynamic>> fetchOrders() async {
     final response = await http.get(Uri.parse("$baseUrl/orders"));
     if (response.statusCode == 200) {
@@ -66,7 +66,7 @@ static Future<List<dynamic>> fetchStatus() async {
     }
   }
 
-  // Submit new task
+  
   static Future<void> submitOrder(String task, {String destination = "autonomous"}) async {
     final response = await http.post(
       Uri.parse("$baseUrl/order"),
