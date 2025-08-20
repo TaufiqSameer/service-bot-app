@@ -166,7 +166,7 @@ class _IndexPageState extends State<IndexPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // Hero Section
+          
                   Container(
                     padding: const EdgeInsets.symmetric(
                       vertical: 40,
@@ -202,7 +202,7 @@ class _IndexPageState extends State<IndexPage> {
                   ),
                   const SizedBox(height: 20),
 
-                  // About Section
+                  
                   buildCustomCard(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -222,7 +222,7 @@ class _IndexPageState extends State<IndexPage> {
                     ),
                   ),
 
-                  // Move Robot Button
+                  
                   Center(
                     child: ElevatedButton(
                       onPressed: () async {
@@ -254,7 +254,7 @@ class _IndexPageState extends State<IndexPage> {
                   ),
                   const SizedBox(height: 20),
 
-                  // Robot Status Logs
+                  
                   buildCustomCard(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -328,7 +328,7 @@ class _IndexPageState extends State<IndexPage> {
                     ),
                   ),
 
-                  // Recent Orders
+                  
                   buildCustomCard(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -411,8 +411,7 @@ class _IndexPageState extends State<IndexPage> {
                       ],
                     ),
                   ),
-
-                  // Robot Location
+                  
                   buildCustomCard(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -455,7 +454,7 @@ class _IndexPageState extends State<IndexPage> {
                     ),
                   ),
 
-                  // Project Team
+                  
                   buildCustomCard(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
